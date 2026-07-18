@@ -108,6 +108,83 @@
   }
   .blob-pulse, .pointer-events-none { max-width: 100vw; }
 
+  /* === MOBILE-ONLY PREMIUM FIXES — Discover header + Pricing — DO NOT affect desktop === */
+  @media (max-width: 767px) {
+    /* 1. WHAT YOU WILL DISCOVER HERE + INVEROS badge */
+    .rounded-\[20px\] > .flex.items-center.justify-between {
+      gap: 12px !important;
+      flex-wrap: nowrap !important;
+      align-items: center !important;
+    }
+    .rounded-\[20px\] > .flex.items-center.justify-between > div {
+      flex: 1 1 auto !important;
+      min-width: 0 !important;
+      white-space: nowrap !important;
+      overflow-wrap: normal !important;
+      word-break: keep-all !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      font-size: 10px !important;
+      letter-spacing: 0.12em !important;
+      line-height: 1.2 !important;
+    }
+    .rounded-\[20px\] > .flex.items-center.justify-between > span {
+      white-space: nowrap !important;
+      overflow-wrap: normal !important;
+      word-break: keep-all !important;
+      flex-shrink: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-width: fit-content !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      line-height: 1 !important;
+    }
+
+    /* 2. Pricing — Rs. 15,000 premium fix */
+    #pricing .mt-7.flex.items-baseline.gap-3 {
+      flex-wrap: wrap !important;
+      align-items: center !important;
+      gap: 8px 10px !important;
+      row-gap: 10px !important;
+    }
+    /* Rs. 15,000 — full width, never split */
+    #pricing .mt-7.flex.items-baseline.gap-3 > span:nth-child(1) {
+      white-space: nowrap !important;
+      overflow-wrap: normal !important;
+      word-break: keep-all !important;
+      overflow: visible !important;
+      flex-basis: 100% !important;
+      font-size: 36px !important;
+      line-height: 1 !important;
+      letter-spacing: -0.03em !important;
+    }
+    /* Rs. 25,000 — keep in one piece */
+    #pricing .mt-7.flex.items-baseline.gap-3 > span:nth-child(2) {
+      white-space: nowrap !important;
+      overflow-wrap: normal !important;
+      word-break: keep-all !important;
+      font-size: 14px !important;
+      line-height: 1 !important;
+    }
+    /* NPR • ONE TIME — premium pill, never split */
+    #pricing .mt-7.flex.items-baseline.gap-3 > span:nth-child(3) {
+      white-space: nowrap !important;
+      overflow-wrap: normal !important;
+      word-break: keep-all !important;
+      flex-shrink: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 6px 12px !important;
+      line-height: 1 !important;
+      font-size: 10px !important;
+      letter-spacing: 0.05em !important;
+      min-width: fit-content !important;
+    }
+  }
+
 </style>
 </head>
 <body class="bg-[#080F26] text-white selection:bg-[#7A5CFA]/30">
