@@ -108,7 +108,7 @@
   }
   .blob-pulse, .pointer-events-none { max-width: 100vw; }
 
-  /* === MOBILE-ONLY PREMIUM FIXES — Discover header + Pricing — DO NOT affect desktop === */
+  /* === MOBILE-ONLY PREMIUM FIXES — Discover, Pricing, Hero, Inbox — DO NOT affect desktop === */
   @media (max-width: 767px) {
     /* 1. WHAT YOU WILL DISCOVER HERE + INVEROS badge */
     .rounded-\[20px\] > .flex.items-center.justify-between {
@@ -149,7 +149,6 @@
       gap: 8px 10px !important;
       row-gap: 10px !important;
     }
-    /* Rs. 15,000 — full width, never split */
     #pricing .mt-7.flex.items-baseline.gap-3 > span:nth-child(1) {
       white-space: nowrap !important;
       overflow-wrap: normal !important;
@@ -160,7 +159,6 @@
       line-height: 1 !important;
       letter-spacing: -0.03em !important;
     }
-    /* Rs. 25,000 — keep in one piece */
     #pricing .mt-7.flex.items-baseline.gap-3 > span:nth-child(2) {
       white-space: nowrap !important;
       overflow-wrap: normal !important;
@@ -168,7 +166,6 @@
       font-size: 14px !important;
       line-height: 1 !important;
     }
-    /* NPR • ONE TIME — premium pill, never split */
     #pricing .mt-7.flex.items-baseline.gap-3 > span:nth-child(3) {
       white-space: nowrap !important;
       overflow-wrap: normal !important;
@@ -182,6 +179,98 @@
       font-size: 10px !important;
       letter-spacing: 0.05em !important;
       min-width: fit-content !important;
+    }
+
+    /* 3. HERO right cut fix — prevent white card clipping on mobile */
+    main#home > section:first-of-type {
+      overflow: visible !important;
+    }
+    main#home > section:first-of-type > div.grid {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      max-width: 100vw !important;
+      box-sizing: border-box !important;
+      overflow: visible !important;
+    }
+    main#home > section:first-of-type .max-w-\[460px\] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    main#home > section:first-of-type .max-w-\[460px\] > div {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* 4. INBOX Gmail sample — SC / Saugat Chilwal / email / NEW fix */
+    .rounded-\[24px\] .p-5 > .flex.items-start.justify-between {
+      gap: 10px !important;
+      align-items: flex-start !important;
+      flex-wrap: nowrap !important;
+    }
+    .rounded-\[24px\] .p-5 > .flex.items-start.justify-between > div.flex.gap-3 {
+      flex: 1 1 auto !important;
+      min-width: 0 !important;
+      overflow: hidden !important;
+    }
+    .rounded-\[24px\] .p-5 > .flex.items-start.justify-between > div.flex.gap-3 > img.h-9 {
+      flex-shrink: 0 !important;
+      width: 36px !important;
+      height: 36px !important;
+    }
+    .rounded-\[24px\] .p-5 > .flex.items-start.justify-between > div.flex.gap-3 > div:last-child {
+      min-width: 0 !important;
+      flex: 1 1 auto !important;
+      overflow: hidden !important;
+    }
+    .rounded-\[24px\] .p-5 > .flex.items-start.justify-between > div.flex.gap-3 > div:last-child > div.flex.items-center.gap-2 {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 3px !important;
+      min-width: 0 !important;
+    }
+    .rounded-\[24px\] .p-5 > .flex.items-start.justify-between > div.flex.gap-3 > div:last-child > div.flex.items-center.gap-2 > span:first-child {
+      white-space: nowrap !important;
+      overflow-wrap: normal !important;
+      word-break: keep-all !important;
+      font-size: 14px !important;
+      line-height: 1.2 !important;
+      display: block !important;
+    }
+    .rounded-\[24px\] .p-5 > .flex.items-start.justify-between > div.flex.gap-3 > div:last-child > div.flex.items-center.gap-2 > span:last-child {
+      white-space: nowrap !important;
+      overflow-wrap: normal !important;
+      word-break: keep-all !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      max-width: 170px !important;
+      font-size: 11px !important;
+      line-height: 1.2 !important;
+      display: block !important;
+    }
+    .rounded-\[24px\] .p-5 > .flex.items-start.justify-between > div.flex.gap-3 > div:last-child > div.mt-0\.5 {
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      max-width: 100% !important;
+    }
+    .rounded-\[24px\] .p-5 > .flex.items-start.justify-between > span:last-child {
+      white-space: nowrap !important;
+      overflow-wrap: normal !important;
+      word-break: keep-all !important;
+      flex-shrink: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-width: fit-content !important;
+      min-height: 26px !important;
+      padding: 5px 11px !important;
+      line-height: 1 !important;
+      font-size: 10px !important;
     }
   }
 
